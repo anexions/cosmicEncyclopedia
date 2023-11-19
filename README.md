@@ -1,2 +1,1 @@
-# cosmicEncyclopedia
-Little Encyclopedia of the Universe for Kids.
+#StellarQuest: The Junior Space Encyclopedia

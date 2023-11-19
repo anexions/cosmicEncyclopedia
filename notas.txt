@@ -1,0 +1,41 @@
+#Creamos la app con react-vite
+npm create vite@latest my-react-app --template react 
+
+#Navegamos a la carpeta
+
+#Instalamos dependencias
+npm install
+
+#Ejecutamos la app
+npm run dev
+
+#Instalamos react-parallax para las animaciones 
+npm install @react-spring/parallax
+
+Parallax tiene dos componentes: 
+1) Parallax con el numero de paginas que tu le pongas. pages={num pagina} 
+2) ParallaxLayer (hijo) con las animaciones (dentro de esto está el contenido) offset={num pagina}
+
+1. Pages (pages)
+Esta propiedad define el número total de "páginas" o la altura total de tu componente parallax.
+Se mide en "unidades de altura de la ventana". Por ejemplo, un valor de 3 significa que el scroll total será el triple de la altura de la ventana del navegador.
+Esto determina cuánto debe desplazarse el usuario para llegar al final del efecto parallax.
+
+2. Speed (speed)
+La propiedad speed controla la velocidad a la que se mueve un ParallaxLayer en relación con el scroll.
+Un valor de 0 significa que la capa se moverá al mismo ritmo que el scroll, mientras que un valor positivo la hará moverse más rápido y un valor negativo más lento.
+Esta propiedad permite crear el efecto de profundidad, donde diferentes capas parecen moverse a diferentes velocidades.
+
+3. Offset (offset) 1 offset = 1 viewport  ++offset mas tarda en aparecer 
+offset determina en qué punto del scroll total aparecerá un ParallaxLayer.
+Se mide en la misma unidad que pages. Por ejemplo, un offset de 1.5 en un parallax de 3 páginas posicionará la capa a la mitad del segundo "scroll de página".
+Esta propiedad es crucial para alinear tus capas en los puntos deseados del scroll.
+
+4. Factor (factor) 1 factor = 1+ de la altura del viewport
+factor define cuánto espacio ocupa un ParallaxLayer en términos de altura.
+Al igual que pages, se mide en "unidades de altura de la ventana".
+Por ejemplo, un factor de 2 hará que la capa tenga el doble de la altura de la ventana del navegador. Esto es útil para capas que quieres que sean más grandes (y por lo tanto, se desplacen más) que una "página" estándar.
+
+5. Sticky (sticky)
+La propiedad sticky no es una propiedad directa en react-spring/parallax, pero en el contexto general de efectos parallax, "sticky" se refiere a un elemento que se mantiene fijo en una posición específica en la pantalla durante un cierto rango de scroll.
+En algunos sistemas de parallax, podrías tener una funcionalidad donde ciertas capas se "pegan" en un punto y luego continúan moviéndose después de un cierto punto de scroll.
